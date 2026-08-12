@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introducao ao javaScript</title>
+  </head>
+  <body>
+    <h1>Introdução ao JavaScript</h1>
+    <p>Eu sou...</p>
+  </body>
+  <!--JAVA SCRIPT INTERNO-->
+  <script>
+    /*
+     */
+    /*var nome = "Isaque";
+    document.write(nome);
+    document.write("<br>");*/
+    var nome = window.prompt("Digite seu nome: ");
+    document.write(nome);
+
+    // LET
+    document.write("<br>");
+    let cidade = window.prompt("Digite a sua cidade: ");
+    //document.write("Eu moro em: " + cidade);
+    document.write("<br>");
+    document.write("Eu moro em " + cidade + "<br>");
+
+    //CONST
+    const idade = Number(window.prompt("Digite a sua idade: "));
+    document.write("Eu tenho: " + idade + " anos");
+    document.write("<br>");
+
+    // Verificando o tipo das variáveis
+    document.write("O tipo da variável nome é " + typeof nome);
+    document.write("<br> O tipo da variável idade é " + typeof idade);
+
+    // EXIBINDO UMA MENSAGEM DE ALERTA
+    window.alert(`Bem-vindo ${nome}!`);
+
+    //SOLICITANDO DOIS NUMEROS AO USUARIO
+    document.write("<br>");
+    const n1 = Number(window.prompt("Digite um número: "));
+    const n2 = Number(window.prompt("Digite outro número: "));
+    const soma = n1 + n2;
+    document.write("O resultado da soma é " + soma);
+    document.write("<br>");
+    document.write(`O resultado da soma de ${n1} + ${n2} é ${soma}`);
+
+    //FORMATANDO STRINGS
+    document.write(
+      `<br> Seu nome em letras maiúsculas é ${nome.toUpperCase()}`,
+    );
+    document.write(
+      `<br>eu nome em letras minúsculas é ${nome.toLocaleLowerCase()}`,
+    );
+
+    // FORMATAÇÃO DE NÚMEROS
+    document.write("<br>")
+    const salario = 2500;
+    document.write(`<br> Salário com casas decimais: ${salario.toFixed(2)}`);
+    document.write(
+      `<br>Salário com casa decimal e vírgula: ${salario.toFixed(2).replace(".", ",")}`,
+    );
+
+    // FORMATAÇÃO DE MOEDA
+    //REAL
+document.write(`<br> Salário em real: ${salario.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`)
+
+    //DOLAR
+    document.write(`<br> Salário em dólar: ${salario.toLocaleString('pt-br', {style: 'currency', currency: 'USD'})}`)
+
+  </script>
+</html>
